@@ -116,32 +116,32 @@ function preload() {
 
 
     //  Unique identifier, URL of the image (relative)
-    game.load.image("background", "styles/map-with-circles.png");
+    game.load.image("background", "styles/img/map-with-circles.png");
 
     // monsters
-    game.load.image('orc', 'styles/orc.png');
+    game.load.image('orc', 'styles/img/orc.png');
 
     // buttons
-    game.load.image("btnAttack", "styles/btnAttack.png");
-    game.load.image("btnDiscard", "styles/btnDiscard.png");
-    game.load.image("btnDone", "styles/btnDone.png");
-    game.load.image("btnStart", "styles/btnStart.png");
-    game.load.image("btn1Player", "styles/btn1Player.png");
-    game.load.image("btn2Players", "styles/btn2Players.png");
+    game.load.image("btnAttack", "styles/img/btnAttack.png");
+    game.load.image("btnDiscard", "styles/img/btnDiscard.png");
+    game.load.image("btnDone", "styles/img/btnDone.png");
+    game.load.image("btnStart", "styles/img/btnStart.png");
+    game.load.image("btn1Player", "styles/img/btn1Player.png");
+    game.load.image("btn2Players", "styles/img/btn2Players.png");
 
     // cards
-    game.load.image("RedKnight", "styles/RedKnight.png");
-    game.load.image("BlueKnight", "styles/BlueKnight.png");
-    game.load.image("GreenKnight", "styles/GreenKnight.png");
-    game.load.image("RedArcher", "styles/RedArcher.png");
-    game.load.image("BlueArcher", "styles/BlueArcher.png");
-    game.load.image("GreenArcher", "styles/GreenArcher.png");
-    game.load.image("RedSwordsman", "styles/RedSwordsman.png");
-    game.load.image("BlueSwordsman", "styles/BlueSwordsman.png");
-    game.load.image("GreenSwordsman", "styles/GreenSwordsman.png");
+    game.load.image("RedKnight", "styles/img/RedKnight.png");
+    game.load.image("BlueKnight", "styles/img/BlueKnight.png");
+    game.load.image("GreenKnight", "styles/img/GreenKnight.png");
+    game.load.image("RedArcher", "styles/img/RedArcher.png");
+    game.load.image("BlueArcher", "styles/img/BlueArcher.png");
+    game.load.image("GreenArcher", "styles/img/GreenArcher.png");
+    game.load.image("RedSwordsman", "styles/img/RedSwordsman.png");
+    game.load.image("BlueSwordsman", "styles/img/BlueSwordsman.png");
+    game.load.image("GreenSwordsman", "styles/img/GreenSwordsman.png");
 
     // castle
-    game.load.image("castle", "styles/castle.png");
+    game.load.image("castle", "styles/img/castle.png");
 
 }
 
