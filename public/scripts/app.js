@@ -143,7 +143,7 @@ var colorWedges = ["Red", "Red", "Green", "Green", "Blue", "Blue"];
 // Setting Variables
 var shuffleFactor = 5; // The number of shuffle iterations
 
-var versionNumber = 1.2;
+var versionNumber = "1.2.5";
 
 
 
@@ -181,7 +181,7 @@ function playerMaker(name) {
 
 // Prepare Everything
 function prepareGame(num) {
-  console.log("Running Version" + versionNumber);
+  console.log("Running Version: " + versionNumber);
   for (var i = 0; i < num; i++) {
     player[i] = new playerMaker("player"+i);
   };
@@ -443,11 +443,19 @@ function playerDiscard(playerNum, discardCard) {
 
 // Check monstersOnBoard for 0 HP and remove that monster
 function checkForDeadMonsters() {
-  for (var monster in monstersOnBoard) {
-    if (monstersOnBoard[monster][3] == 0) {
-      monstersOnBoard.splice(monster, 1);
+  var temp_monstersOnBoard = {};
+  var monsterCounter = 0;
+  console.log("monstersOnBoard.length");
+  console.log(monstersOnBoard.length);
+  for (var monster = 0; monster < monstersOnBoard.length; monster++) {
+    console.log("Check for Dead Monsters. Monster " + monster + " of " + monstersOnBoard.length);
+    console.log(monstersOnBoard[monster]);
+    if (monstersOnBoard[monster][3] != 0 && monstersOnBoard[monster][2].split(" ")[2] != "Castle") {
+      temp_monstersOnBoard[monsterCounter] = monstersOnBoard[monster];
+      monsterCounter += 1;
     }
   }
+  monstersOnBoard = temp_monstersOnBoard;
   // for now, update the text on screen
   showMonstersOnBoard();
 }
@@ -480,6 +488,8 @@ function moveMonstersInOne() {
     } else if (tokenLocation == "Swordsman") {
       // TODO: add a check for the walls and castles
       monstersOnBoard[monster][2] = monstersOnBoard[monster][2].replace(/Swordsman/, "Castle");
+      monstersOnBoard[monster[3]] = 0
+      checkForDeadMonsters();
     }
   }
 }
