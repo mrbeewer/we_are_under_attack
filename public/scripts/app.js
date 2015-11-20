@@ -143,7 +143,7 @@ var colorWedges = ["Red", "Red", "Green", "Green", "Blue", "Blue"];
 // Setting Variables
 var shuffleFactor = 5; // The number of shuffle iterations
 
-
+var versionNumber = 1.2;
 
 
 
@@ -181,7 +181,7 @@ function playerMaker(name) {
 
 // Prepare Everything
 function prepareGame(num) {
-
+  console.log("Running Version" + versionNumber);
   for (var i = 0; i < num; i++) {
     player[i] = new playerMaker("player"+i);
   };
